@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import { getCatsFetch } from './catState';
+import { getCatsFetch } from './redux/slices/catSlice';
 
 function App() {
   const cats = useSelector(state => state.cats.cats);
+  const catsState = useSelector(state => state.cats);
   const dispatch = useDispatch();
 
 
@@ -14,7 +15,7 @@ function App() {
   }, [dispatch]);
 
   
-  console.log(cats)
+  console.log(catsState)
 
   return (
     <div className="App">
