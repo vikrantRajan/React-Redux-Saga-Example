@@ -1,3 +1,3 @@
 
 import axios from 'axios';
-export const requestGetCats = () => axios.get("https://api.thecatapi.com/v1/breeds");
+export const requestGetCats = async () => await axios.get("https://api.thecatapi.com/v1/breeds");
